@@ -5,7 +5,7 @@ module immediate_gen (
 );
 
 logic [24:0] Imm;
-assign Imm =InstF [31:7];
+assign Imm = InstF [31:7];
 
   always_comb begin
     casex(ImmSrcD)

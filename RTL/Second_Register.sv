@@ -1,36 +1,33 @@
 module Second_Register (
-    input  logic        clk,rst,
-    input  logic        StallE,
- 	input  logic        FlushE,
-    input  logic [4:0]  waddr,
-    input  logic [31:0] AddrF,ALUResult,SrcBE,
-    output logic [31:0] AddrDE,ALUResultDE,rdata2DE,
-    output logic [4:0]  waddrDE
-    
-
+    input  logic         clk,rst,Stall_MW,    
+    input  logic  [4:0]  waddr,
+    input  logic  [31:0] AddrF,ALUResult,SrcBE,
+  
+    output logic  [4:0]  waddr_MW,
+    output logic  [31:0] Addr_MW,ALUResult_MW,rdata2_MW
 );
 
 always_ff @( posedge clk ) begin
 
-    if( rst ) begin
-        AddrDE      <= 32'b0;
-        ALUResultDE <= 32'b0;
-        rdata2DE    <= 32'b0;
-        waddrDE     <= 32'b0;
-    end
-    else if(StallE) begin
-        AddrDE      <= AddrDE ;
-        ALUResultDE <= ALUResultDE;
-        rdata2DE    <= rdata2DE;
-        waddrDE     <= waddrDE;
+    if (rst) begin
+        Addr_MW      <= 32'b0;
+        ALUResult_MW <= 32'b0;
+        rdata2_MW    <= 32'b0;
+        waddr_MW     <= 5'b0;
+    end 
 
-    end
-     
+    else if (Stall_MW) begin
+        Addr_MW      <= Addr_MW;
+        ALUResult_MW <= ALUResult_MW;
+        rdata2_MW    <= rdata2_MW;
+        waddr_MW     <= waddr_MW;         
+    end 
+
     else begin
-        AddrDE      <= AddrF;
-        ALUResultDE <= ALUResult;
-        rdata2DE    <= SrcBE;
-        waddrDE     <= waddr;
+        Addr_MW      <= AddrF;
+        ALUResult_MW <= ALUResult;
+        rdata2_MW    <= SrcBE;
+        waddr_MW     <= waddr;                        
     end
-end 
+end
 endmodule

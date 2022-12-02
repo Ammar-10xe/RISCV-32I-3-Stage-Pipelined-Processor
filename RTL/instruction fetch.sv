@@ -4,8 +4,8 @@ module Instruction_Fetch (
 );
 
 always_comb begin
-        raddr1 = InstF[19:15];
-        raddr2 = InstF[24:20];
-        waddr  = InstF[11:7];  
+        raddr1 = InstF [19:15];
+        raddr2 = InstF [24:20];
+        waddr  = InstF [11:7];  
 end
 endmodule

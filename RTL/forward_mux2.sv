@@ -1,22 +1,14 @@
-module forward_mux2 #(parameter WIDTH =32)(
-  input  logic [WIDTH-1:0] rdata2, ALUResultDE,
-  input  logic             ForwardBE,
-  output logic [WIDTH-1:0] SrcBE
+module forward_mux2(
+  input  logic [31:0] rdata2, ALUResult_MW,
+  input  logic For_B,
+  output logic [31:0] SrcBE
 );
-
- // assign WriteDataE = ForwardBE[1] ? ALUResultM : (ForwardBE[0] ? ResultW : RD2E);
-
-
-always_comb
-begin
-case (ForwardBE)
- 
- 1'b0: SrcBE = rdata2;
- 1'b1: SrcBE = ALUResultDE;
-
- default: SrcBE = rdata2;
-
-endcase
-
+always_comb begin
+    case (For_B)
+        1'b0 : SrcBE = ALUResult_MW;
+        1'b1 : SrcBE = rdata2;
+    default  : SrcBE = rdata2;
+    endcase
 end
+
 endmodule

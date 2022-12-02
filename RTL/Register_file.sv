@@ -1,10 +1,10 @@
 module Register_file (
-     input logic         clk,rst,reg_wr_DE,
-     input logic  [4:0]  raddr1,raddr2,waddrDE,
+     input logic         clk,rst,reg_wrMW,
+     input logic  [4:0]  raddr1,raddr2,waddr_MW,
      input logic  [31:0] wdata,
      output logic [31:0] rdata1,rdata2
 );
-    logic [31:0] register_file[30:0];      
+    logic [31:0] register_file[31:0];
 
 //Asynchronous Read 
     always_comb begin
@@ -13,15 +13,10 @@ module Register_file (
     end
 
 //Synchronous Write
-  // integer i;
   always_ff @(negedge clk) begin
-    if (reg_wr_DE && (|waddrDE)) begin
-        register_file[waddrDE] <= wdata;
-    end
-    // else if (rst) begin
-    //   for(i = 1; i <= 32; i = i + 1)
-    //     register_file[i] <= 32'd0;
-    // end 
+    if (reg_wrMW && (|waddr_MW)) begin
+        register_file[waddr_MW] <= wdata;
+    end 
   end
 
 endmodule

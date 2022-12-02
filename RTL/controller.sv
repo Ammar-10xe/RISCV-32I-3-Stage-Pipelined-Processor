@@ -101,7 +101,7 @@ begin
             reg_wr  = 1'b0;
             sel_A   = 1'b1;
             sel_B   = 1'b1;
-            // wb_sel  = 2'bx;
+            wb_sel  = 2'bx;
             Btype   = 1'b0;
             ImmSrcD = 3'b001;
             alu_op  = ADD;
@@ -133,7 +133,7 @@ begin
             reg_wr  = 1'b0;
             sel_A   = 1'b0; 
             sel_B   = 1'b1; 
-            // wb_sel  = 2'bx;
+            wb_sel  = 2'bx;
             ImmSrcD = 3'b010;
             alu_op  = ADD;
         end

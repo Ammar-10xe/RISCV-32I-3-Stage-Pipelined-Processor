@@ -4,7 +4,7 @@ module program_counter (
 	output logic [31:0] Addr
 );
 
-	always_ff @(posedge clk or posedge rst) begin
+	 always_ff @ (posedge clk or posedge rst) begin
 	 if (rst) 
 	   		Addr <= 32'd0;
 	 else 
