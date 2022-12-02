@@ -1,7 +1,7 @@
 module Hazard_Unit (
-    input  logic       reg_wrMW,PCsrc,          //instead of br_taken,I have used PCSrc here
-    input  logic [1:0] wb_selMW,                //used to check the stalling condition
-    input  logic [4:0] raddr1,raddr2,waddr_MW, //instead of giving InstF as an input,I have used raddr1 and raddr2 directly
+    input  logic       reg_wrMW,PCsrc,           //instead of br_taken,I have used PCSrc here
+    input  logic [1:0] wb_selMW,                 //used to check the stalling condition
+    input  logic [4:0] raddr1,raddr2,waddr_MW,   //instead of giving InstF as an input,I have used raddr1 and raddr2 directly
     output logic       For_A, For_B,Stall,Stall_MW,Flush
     
 );
