@@ -1,10 +1,11 @@
 module LoadStore_Unit (
+    input  logic        Stall_MW,valid_DM,
     input  logic [2:0]  InstF_MW_funct3,
     input  logic [6:0]  InstF_MW_opcode,
     input  logic [31:0] data_rd,      // From Data Mem in case of Load Instr 
 	input  logic [31:0] rdata2_MW,        
     input  logic [31:0] ALUResult_MW,    
-    output logic        cs,wr, 
+    output logic        cs,wr,Stall_MW_DM,valid, 
     output logic [3:0]  mask,
     output logic [31:0] addr,data_wr,  //addr >> ALUResult and data_wr >> rdata 2
 	output logic [31:0] rdata          //Data to be load back to destination Register 
@@ -16,6 +17,8 @@ parameter Word              = 3'b010;
 parameter Byte_Unsigned     = 3'b100;
 parameter HalfWord_Unsigned = 3'b101;
 assign addr                 = ALUResult_MW;
+assign Stall_MW_DM          = Stall_MW;
+assign valid                = valid_DM;
 
 always_comb begin
     wr = 1;

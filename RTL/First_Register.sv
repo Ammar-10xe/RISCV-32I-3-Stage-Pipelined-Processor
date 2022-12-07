@@ -16,7 +16,6 @@ module First_Register (
         else if (Flush) begin
             InstF <= 32'h00000013;
         end
-
         else begin
             AddrF <= Addr;
             InstF <= Inst;

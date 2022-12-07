@@ -3,6 +3,6 @@ module AddrPlus4 (
   output logic [31:0] AddrPlus4
 );
 
-  assign AddrPlus4 = Addr_MW + 4;
+  assign AddrPlus4 = Addr_MW + 32'd4;
   
 endmodule
