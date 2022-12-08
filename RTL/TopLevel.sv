@@ -1,19 +1,25 @@
 module TopLevel (input logic clk,rst);
 
-    logic        PCsrc,reg_wr,sel_A,sel_B,cs,wr,br_taken,reg_wrMW,For_A,For_B,Stall,Flush,Stall_MW,valid,valid_DM,Stall_MW_DM;
+    logic        PCsrc,reg_wr,sel_A,sel_B,cs,wr,br_taken,reg_wrMW,For_A,For_B,Stall,Flush,
+                 Stall_MW,valid,valid_DM,Stall_MW_DM, csr_reg_wr, csr_reg_rd, csr_reg_wrMW, csr_reg_rdMW;
     logic [1:0]  wb_sel,wb_selMW;
     logic [2:0]  ImmSrcD,funct3,InstF_MW_funct3;
     logic [3:0]  mask;
     logic [4:0]  raddr1,raddr2,waddr,alu_op,waddr_MW;
     logic [6:0]  instr_opcode,InstF_MW_opcode;
-    logic [31:0] Addr,PC,Inst,PCF,wdata,rdata1,SrcAE,rdata2,SrcBE,ImmExtD,SrcA,SrcB,ALUResult,rdata,data_rd,addr,data_wr,AddrPlus4,AddrF,InstF,Addr_MW,ALUResult_MW,rdata2_MW;
+    logic [31:0] Addr,PC,Inst,PCF,wdata,rdata1,SrcAE,rdata2,SrcBE,ImmExtD,SrcA,SrcB,ALUResult,
+                 rdata,data_rd,addr,data_wr,AddrPlus4,AddrF,InstF,Addr_MW,ALUResult_MW,rdata2_MW, 
+                 SrcA_MW, ImmExt_MW, csr_rdata, csr_evec;
 
 
 Mux_PC MuxPC(
     .PCF(PCF),
     .ALUResult(ALUResult),
     .PCsrc(PCsrc),
-    .PC(PC));
+    .PC(PC),
+    .csr_reg_rdMW(csr_reg_rdMW),
+    .csr_reg_wrMW(csr_reg_wrMW),
+    .csr_evec(csr_evec));
 
 program_counter ProgCounter (
     .clk(clk),
@@ -64,7 +70,9 @@ controller Controller(
     .ImmSrcD(ImmSrcD),
     .funct3(funct3),
     .alu_op(alu_op),
-    .instr_opcode(instr_opcode));
+    .instr_opcode(instr_opcode),
+    .csr_reg_wr(csr_reg_wr), 
+    .csr_reg_rd(csr_reg_rd));
 
 LoadStore_Unit loadstore(
     .Stall_MW(Stall_MW),
@@ -116,7 +124,8 @@ MuxResult Muxresult(
     .ALUResult_MW(ALUResult_MW),
     .rdata(rdata),
     .AddrPlus4(AddrPlus4),
-    .wdata(wdata));
+    .wdata(wdata),
+    .csr_rdata(csr_rdata));
 
 BranchCond Branchcond(
     .funct3(funct3),
@@ -150,7 +159,16 @@ Second_Register second_register(
     .waddr_MW(waddr_MW),
     .Addr_MW(Addr_MW),
     .ALUResult_MW(ALUResult_MW),
-    .rdata2_MW(rdata2_MW));
+    .rdata2_MW(rdata2_MW),
+    .csr_reg_wr(csr_reg_wr),
+    .csr_reg_rd(csr_reg_rd),
+    .csr_reg_wrMW(csr_reg_wrMW),
+    .csr_reg_rdMW(csr_reg_rdMW),
+    .SrcAE(SrcAE),
+    .SrcA_MW(SrcA_MW),
+    .ImmExtD(ImmExtD),
+    .ImmExt_MW(ImmExt_MW)
+    );
     
 forward_mux1 ForwardMux1(
     .rdata1(rdata1),
@@ -189,6 +207,17 @@ Hazard_Controller hazardcontroller(
     .wb_selMW(wb_selMW),
     .InstF_MW_funct3(InstF_MW_funct3),
     .InstF_MW_opcode(InstF_MW_opcode));
+
+csr csr (
+    .clk(clk), 
+    .rst(rst), 
+    .csr_reg_wrpin(csr_reg_wrMW), 
+    .csr_reg_rdpin(csr_reg_rdMW), 
+    .csr_pc(Addr_MW), 
+    .csr_addr32(ImmExt_MW), 
+    .csr_wdata(SrcA_MW), 
+    .csr_rdata(csr_rdata), 
+    .csr_evec(csr_evec));
 
 endmodule
 
