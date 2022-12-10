@@ -80,7 +80,7 @@ always_ff @( posedge rst, posedge clk ) begin
 end
 
 //update the mie (Machine interrupt-enable register) CSR
-always_ff @( posedge clk ) begin 
+always_ff @( posedge rst, posedge clk) begin 
     if( rst ) begin
         csr_mie_ff <= 32'b0 ;
     end
@@ -90,7 +90,7 @@ always_ff @( posedge clk ) begin
 end
 
 //update the mstatus ( Machine status register) CSR
-always_ff @( posedge clk ) begin 
+always_ff @( posedge rst, posedge clk ) begin 
     if( rst ) begin
         csr_mstatus_ff <= 32'b0;
     end
@@ -100,7 +100,7 @@ always_ff @( posedge clk ) begin
 end
 
 //update the mcause ( Machine trap cause ) CSR
-always_ff @( posedge clk ) begin 
+always_ff @( posedge rst, posedge clk ) begin 
     if( rst ) begin
         csr_mcause_ff <= 32'b0;
     end
@@ -110,7 +110,7 @@ always_ff @( posedge clk ) begin
 end
 
 //update the mtvec ( Machine trap-handler base address ) CSR
-always_ff @( posedge clk ) begin 
+always_ff @( posedge rst, posedge clk ) begin 
     if( rst ) begin
         csr_mtvec_ff <= 32'b0;
     end
@@ -120,7 +120,7 @@ always_ff @( posedge clk ) begin
 end
 
 //update the mepc ( Machine exception program counter ) CSR
-always_ff @( posedge clk ) begin 
+always_ff @( posedge rst, posedge clk ) begin 
     if( rst ) begin
         csr_mepc_ff <= 32'b0;
     end
