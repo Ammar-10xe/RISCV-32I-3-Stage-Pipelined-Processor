@@ -1,11 +1,9 @@
 module Second_Register (
-    input  logic         clk,rst,Stall_MW, csr_reg_wr, csr_reg_rd,   
+    input  logic         clk,rst,Stall_MW,
     input  logic  [4:0]  waddr,
     input  logic  [31:0] AddrF,ALUResult,SrcBE, SrcAE, ImmExtD,
-  
     output logic  [4:0]  waddr_MW,
-    output logic  [31:0] Addr_MW,ALUResult_MW,rdata2_MW, SrcA_MW, ImmExt_MW,
-    output logic         csr_reg_wrMW, csr_reg_rdMW
+    output logic  [31:0] Addr_MW,ALUResult_MW,rdata2_MW, SrcA_MW, ImmExt_MW
 );
 
 always_ff @( posedge clk ) begin

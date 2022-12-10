@@ -1,1 +1,162 @@
+C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/Instruction_Memory.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/Instruction_Memory.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Instruction_Memory
 
+Top level modules:
+	Instruction_Memory
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/ALU.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/ALU.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/BranchCond.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/BranchCond.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module BranchCond
+
+Top level modules:
+	BranchCond
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/Data_Memory.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/Data_Memory.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Data_Memory
+
+Top level modules:
+	Data_Memory
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/PCPlus4.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/PCPlus4.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module PCPlus4
+
+Top level modules:
+	PCPlus4
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/AddrPlus4.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/AddrPlus4.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module AddrPlus4
+
+Top level modules:
+	AddrPlus4
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/Register_file.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/Register_file.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Register_file
+
+Top level modules:
+	Register_file
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/LoadStore_Unit.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/LoadStore_Unit.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module LoadStore_Unit
+
+Top level modules:
+	LoadStore_Unit
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/Hazard_Controller.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/Hazard_Controller.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Hazard_Controller
+
+Top level modules:
+	Hazard_Controller
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/mux_selA.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/mux_selA.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module mux_selA
+
+Top level modules:
+	mux_selA
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/program_Counter.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/program_Counter.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module program_counter
+
+Top level modules:
+	program_counter
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/TopLevel_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/TopLevel_tb.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module TopLevel_tb
+
+Top level modules:
+	TopLevel_tb
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/Second_Register.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/Second_Register.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Second_Register
+
+Top level modules:
+	Second_Register
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/forward_mux2.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/forward_mux2.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module forward_mux2
+
+Top level modules:
+	forward_mux2
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/TopLevel.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/TopLevel.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module TopLevel
+
+Top level modules:
+	TopLevel
+
+} {} {}} {C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/instruction fetch.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/instruction fetch.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Instruction_Fetch
+
+Top level modules:
+	Instruction_Fetch
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/First_Register.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/First_Register.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module First_Register
+
+Top level modules:
+	First_Register
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/mux_selB.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/mux_selB.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module mux_selB
+
+Top level modules:
+	mux_selB
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/forward_mux1.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/forward_mux1.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module forward_mux1
+
+Top level modules:
+	forward_mux1
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/csr.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/csr.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module csr
+
+Top level modules:
+	csr
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/Immediate_Gen.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/Immediate_Gen.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module immediate_gen
+
+Top level modules:
+	immediate_gen
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/MuxResult.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/MuxResult.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module MuxResult
+
+Top level modules:
+	MuxResult
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/Hazard_Unit.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/Hazard_Unit.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Hazard_Unit
+
+Top level modules:
+	Hazard_Unit
+
+} {} {}}

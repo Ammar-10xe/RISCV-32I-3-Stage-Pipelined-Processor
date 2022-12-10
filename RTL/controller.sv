@@ -29,7 +29,8 @@ assign funct3       = InstF[14:12];
 
 always_comb
 begin
-    
+      csr_reg_wr = 1'b0;
+      csr_reg_rd = 1'b0;
     case(instr_opcode)
 
         7'b0110011: //R-Type
