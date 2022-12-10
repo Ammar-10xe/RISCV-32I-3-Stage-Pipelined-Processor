@@ -93,7 +93,7 @@ begin
             sel_A   = 1'b1;
             sel_B   = 1'b1;
             wb_sel  = 2'b10;
-            Btype    = 1'b0;
+            Btype   = 1'b0;
             ImmSrcD = 3'b000;
             alu_op  = ADD;
             end
@@ -160,12 +160,15 @@ begin
         end
 
         7'b1110011: begin //csr
-            if (funct3 != 0) begin
                 csr_reg_wr = 1'b1;
                 csr_reg_rd = 1'b1;
                 ImmSrcD    = 3'b000;
                 wb_sel     = 2'b11;
-            end
+                reg_wr     = 1'b1;
+                // sel_A    = 1'b1;
+                // sel_B    = 1'b1;
+                Btype    = 1'b0;
+                ImmSrcD  = 3'b000;
         end
 
         default: begin

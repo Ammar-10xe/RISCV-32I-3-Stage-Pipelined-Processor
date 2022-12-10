@@ -14,6 +14,8 @@ module Register_file (
 
 //Synchronous Write
   always_ff @(negedge clk) begin
+    if (rst)
+				register_file <= '{default:'0};
     if (reg_wrMW && (|waddr_MW)) begin
         register_file[waddr_MW] <= wdata;
     end 

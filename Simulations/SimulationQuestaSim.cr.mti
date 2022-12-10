@@ -40,13 +40,6 @@ QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 Top level modules:
 	AddrPlus4
 
-} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/Register_file.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/Register_file.sv
-QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
--- Compiling module Register_file
-
-Top level modules:
-	Register_file
-
 } {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/LoadStore_Unit.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/LoadStore_Unit.sv
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 -- Compiling module LoadStore_Unit
@@ -116,6 +109,13 @@ QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 
 Top level modules:
 	First_Register
+
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/MuxPC.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/MuxPC.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Mux_PC
+
+Top level modules:
+	Mux_PC
 
 } {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/mux_selB.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/mux_selB.sv
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
