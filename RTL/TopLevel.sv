@@ -156,17 +156,13 @@ Second_Register second_register(
     .AddrF(AddrF),
     .ALUResult(ALUResult),
     .SrcBE(SrcBE),
+    .SrcAE(SrcAE),
+    .ImmExtD(ImmExtD),
     .waddr_MW(waddr_MW),
     .Addr_MW(Addr_MW),
     .ALUResult_MW(ALUResult_MW),
     .rdata2_MW(rdata2_MW),
-    .csr_reg_wr(csr_reg_wr),
-    .csr_reg_rd(csr_reg_rd),
-    .csr_reg_wrMW(csr_reg_wrMW),
-    .csr_reg_rdMW(csr_reg_rdMW),
-    .SrcAE(SrcAE),
     .SrcA_MW(SrcA_MW),
-    .ImmExtD(ImmExtD),
     .ImmExt_MW(ImmExt_MW)
     );
     
@@ -201,9 +197,13 @@ Hazard_Controller hazardcontroller(
     .rst(rst),
     .reg_wr(reg_wr),
     .Stall_MW(Stall_MW),
+    .csr_reg_rd(csr_reg_rd),
+    .csr_reg_wr(csr_reg_wr),
     .wb_sel(wb_sel),
     .InstF(InstF),
     .reg_wrMW(reg_wrMW),
+    .csr_reg_rdMW(csr_reg_rdMW),
+    .csr_reg_wrMW(csr_reg_wrMW),
     .wb_selMW(wb_selMW),
     .InstF_MW_funct3(InstF_MW_funct3),
     .InstF_MW_opcode(InstF_MW_opcode));

@@ -1,8 +1,8 @@
 module Hazard_Controller (
-input  logic        clk,rst,reg_wr,Stall_MW,
+input  logic        clk,rst,reg_wr,Stall_MW,csr_reg_rd,csr_reg_wr,
 input  logic [1:0]  wb_sel,
 input  logic [31:0] InstF,
-output logic        reg_wrMW,
+output logic        reg_wrMW,csr_reg_rdMW,csr_reg_wrMW,
 output logic [1:0]  wb_selMW,
 output logic [2:0]  InstF_MW_funct3,
 output logic [6:0]  InstF_MW_opcode
