@@ -163,7 +163,7 @@ begin
                 csr_reg_wr = 1'b1;
                 csr_reg_rd = 1'b1;
                 ImmSrcD    = 3'b000;
-                wb_sel     =  2'b11;
+                wb_sel     = 2'b11;
             end
         end
 

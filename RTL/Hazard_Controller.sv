@@ -14,13 +14,17 @@ always_ff @ ( posedge clk ) begin
         InstF_MW_opcode <= 7'b0;
         wb_selMW        <= 2'bx;
         reg_wrMW        <= 1'b0;  
+        csr_reg_wrMW    <= 1'b0;
+        csr_reg_rdMW    <= 1'b0;
     end
 
      else if ( Stall_MW ) begin
         InstF_MW_funct3 <= InstF_MW_funct3;
         InstF_MW_opcode <= InstF_MW_opcode;
         wb_selMW        <= wb_selMW; 
-        reg_wrMW        <= reg_wrMW;        
+        reg_wrMW        <= reg_wrMW;    
+        csr_reg_wrMW    <= csr_reg_wrMW;
+        csr_reg_rdMW    <= csr_reg_rdMW;     
     end
 
     else begin
@@ -28,6 +32,8 @@ always_ff @ ( posedge clk ) begin
         InstF_MW_opcode <= InstF [6:0];
         wb_selMW        <= wb_sel;
         reg_wrMW        <= reg_wr;
+        csr_reg_wrMW    <= csr_reg_wr;
+        csr_reg_rdMW    <= csr_reg_rd; 
     end
 end
 
