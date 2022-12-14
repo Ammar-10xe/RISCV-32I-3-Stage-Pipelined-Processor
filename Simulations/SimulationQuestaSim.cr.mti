@@ -145,6 +145,13 @@ QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 Top level modules:
 	forward_mux1
 
+} {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/csr.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/csr.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module csr
+
+Top level modules:
+	csr
+
 } {} {}} C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/Immediate_Gen.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/2019E/OneDrive/Desktop/Lab9b/RISCV-32I-3-Stage-Pipelined-Processor/Simulations/Immediate_Gen.sv
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 -- Compiling module immediate_gen

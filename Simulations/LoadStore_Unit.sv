@@ -45,13 +45,13 @@ logic [31:0] rdata_word;
         case(InstF_MW_opcode) 
             7'b0000011: begin //Load
                 case (InstF_MW_funct3)
-                    Byte: case( addr[1:0] )
+                    Byte , Byte_Unsigned: case( addr[1:0] )
                             2'b00 : rdata_byte = data_rd [7:0];
                             2'b01 : rdata_byte = data_rd [15:8];     
                             2'b10 : rdata_byte = data_rd [23:16];
                             2'b11 : rdata_byte = data_rd [31:24]; 
                         endcase     
-                    HalfWord: case( addr[1] )
+                    HalfWord , HalfWord_Unsigned: case( addr[1] )
                             1'b0 : rdata_hword = data_rd [15:0];       
                             1'b1 : rdata_hword = data_rd [31:16];
                         endcase
@@ -83,9 +83,8 @@ always_comb begin
             	Byte :  begin
             		case (addr[1:0])
                     2'b00 : begin
-                        data_wr[7:0] = rdata2_MW[7:0];begin
+                        data_wr[7:0] = rdata2_MW[7:0];
                         mask         = 4'b0001;
-                        end
                     end 
                     2'b01: begin
                         data_wr [15:8] = rdata2_MW[15:8];
