@@ -1,7 +1,7 @@
 module controller (
     input  logic        br_taken,
     input  logic [31:0] InstF,
-    output logic        PCsrc,reg_wr,sel_A,sel_B,
+    output logic        PCsrc,reg_wr,sel_A,sel_B, csr_reg_wr, csr_reg_rd,
     output logic [1:0]  wb_sel,
     output logic [2:0]  ImmSrcD,funct3,
     output logic [4:0]  alu_op,
@@ -29,7 +29,8 @@ assign funct3       = InstF[14:12];
 
 always_comb
 begin
-    
+       csr_reg_wr = 1'b0;
+       csr_reg_rd = 1'b0;
     case(instr_opcode)
 
         7'b0110011: //R-Type
@@ -92,7 +93,7 @@ begin
             sel_A   = 1'b1;
             sel_B   = 1'b1;
             wb_sel  = 2'b10;
-            Btype    = 1'b0;
+            Btype   = 1'b0;
             ImmSrcD = 3'b000;
             alu_op  = ADD;
             end
@@ -156,6 +157,18 @@ begin
             wb_sel  = 2'b00;
             ImmSrcD = 3'b000;
             alu_op  = ADD;
+        end
+
+        7'b1110011: begin //csr
+                csr_reg_wr = 1'b1;
+                csr_reg_rd = 1'b1;
+                ImmSrcD    = 3'b000;
+                wb_sel     = 2'b11;
+                reg_wr     = 1'b1;
+                // sel_A    = 1'b1;
+                // sel_B    = 1'b1;
+                Btype    = 1'b0;
+                ImmSrcD  = 3'b000;
         end
 
         default: begin

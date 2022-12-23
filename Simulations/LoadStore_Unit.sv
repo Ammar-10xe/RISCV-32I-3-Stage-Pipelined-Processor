@@ -83,9 +83,8 @@ always_comb begin
             	Byte :  begin
             		case (addr[1:0])
                     2'b00 : begin
-                        data_wr[7:0] = rdata2_MW[7:0];begin
+                        data_wr[7:0] = rdata2_MW[7:0];
                         mask         = 4'b0001;
-                        end
                     end 
                     2'b01: begin
                         data_wr [15:8] = rdata2_MW[15:8];
